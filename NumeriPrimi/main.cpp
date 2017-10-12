@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <time.h>
-
+#include <string.h>
 using namespace std;
 
 int main()
@@ -12,10 +12,10 @@ int main()
     unsigned long long max;
     cout<<"numero max(non deve essere obbligatoriamente primo): ";
     cin>>max;
-    bool primi[max];
+    bool *primi = new bool[max+1];
     cout<<endl<<"Inizio del calcolo...";
     t_start = clock();
-    memset(&primi,true,max);
+    memset(primi,true,max);
     for(unsigned long long i=3; i*i<=max;i+=2)
     {
         for(unsigned long long l=i*2,m=3;l<=max;l=i*m,m++)primi[l]=false;
