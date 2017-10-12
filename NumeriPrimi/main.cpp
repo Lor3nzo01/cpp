@@ -26,7 +26,7 @@ int main()
     ofstream file("primi.txt", ios::out);
     t_start = clock();
     file<<"2"<<endl; //il 2 è l'unico numero pari per cui per risparmiare tempo lo scriviamo direttamente
-    for(unsigned long long i=3; i<=max;i+=2)if(primi[i]==true)file<<i<<endl;
+    for(unsigned long long i=3; i<=max;i+=2)if(primi[i]==true)file<<i<<"\n";
     t_end = clock();
     t_passed = ((double)(t_end - t_start)) / CLOCKS_PER_SEC;
     cout<<t_passed<<"seconds"<<endl<<"\\\\\\\\ END ////";
