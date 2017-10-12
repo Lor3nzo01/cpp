@@ -15,7 +15,7 @@ int main()
     bool primi[max];
     cout<<endl<<"Inizio del calcolo...";
     t_start = clock();
-    memset(&array,true,MAX);
+    memset(&primi,true,max);
     for(unsigned long long i=3; i*i<=max;i+=2)
     {
         for(unsigned long long l=i*2,m=3;l<=max;l=i*m,m++)primi[l]=false;
