@@ -16,9 +16,9 @@ int main()
     cout<<endl<<"Inizio del calcolo...";
     t_start = clock();
     memset(primi,true,max);
-    for(unsigned long long i=3; i*i<=max;i+=2)
+    for(unsigned long long i=3; i*i<max;i+=2)
     {
-        for(unsigned long long l=i*2,m=3;l<=max;l=i*m,m++)primi[l]=false;
+        for(unsigned long long l=i*2;l<=max;l+=i)primi[l]=false;
     }
     t_end = clock();
     t_passed = ((double)(t_end - t_start)) / CLOCKS_PER_SEC;
