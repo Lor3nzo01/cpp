@@ -27,7 +27,7 @@ int main()
     file<<"2"<<endl;
     for(unsigned long long i=3; i<=max;i+=2)if(primi[i]==true)file<<i<<"\n";
     t_end = clock();t_passed = ((double)(t_end - t_start)) / CLOCKS_PER_SEC;
-    cout<<t_passed<<"seconds"<<endl<<"\\\\\\\\ END ////";
+    cout<<t_passed<<"seconds"<<endl<<"||| END |||";
     file.close();
     return 0;
 }
