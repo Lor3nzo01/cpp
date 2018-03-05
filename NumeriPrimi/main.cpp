@@ -18,7 +18,7 @@ int main()
     memset(primi,true,max);
     for(unsigned long long i=3; i*i<max;i+=2)
     {
-        if(primi[i]==true)for(unsigned long long l=i*2;l<=max;l+=i)primi[l]=false;
+        if(primi[i])for(unsigned long long l=i*2;l<=max;l+=i)primi[l]=false;
     }
     t_end = clock();t_passed = ((double)(t_end - t_start)) / CLOCKS_PER_SEC;
     cout<<t_passed<<"seconds"<<endl<<"scrittura sul file...";
